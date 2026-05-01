@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spatial Context Protocol — Spatial Intelligence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Syne:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="scroll-bar" id="scrollBar"></div>
+<div id="theme-curtain"></div>
+
+<!-- Nav -->
+<nav>
+  <span class="nav-label nav-brand">Spatial Intelligence</span>
+  <span class="nav-dot">·</span>
+  <span class="nav-label">Applied AI Research</span>
+</nav>
+
+<!-- HERO -->
+<div class="container">
+  <div class="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-inner">
+      <p class="hero-eyebrow">Research · 2026</p>
+      <h1 class="hero-title">Spatial Context <span class="accent">Protocol</span></h1>
+      <p class="hero-tagline">A protocol for AI agents that understand the physical world — able to navigate buildings, identify locations, and control their environment in real time.</p>
+      <div class="hero-meta">
+        <span>Yunus Skeete</span>
+        <span>·</span>
+        <span>Founder &amp; CEO, <a href="https://www.spatial-intelligence.co.uk/" target="_blank">Spatial Intelligence</a></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- OVERVIEW -->
+<div class="container">
+  <section>
+    <p class="section-label">Overview <span class="section-counter">— 01</span></p>
+    <div class="overview-grid">
+      <div class="prose">
+        <p>The Spatial Context Protocol (SCP) enables any building to be represented as a compact, LLM-interpretable spatial model. Lightweight enough to run on modest hardware, the model grounds an AI agent in the physical world — giving it native understanding of position, routes, visual landmarks, and live state within a space.</p>
+        <p>As buildings increasingly expose programmatic interfaces — sensors, lighting systems, access control, climate — SCP provides the layer through which agents natively understand and act within them. Rather than treating building control as a bolt-on integration, SCP unifies spatial reasoning and system control.</p>
+        <p class="muted">An agent can observe live state, answer natural language queries, and operate building systems in real time, without a database or vector store.</p>
+      </div>
+      <div>
+        <div class="overview-aside">
+          <span class="overview-aside-label">Key principle</span>
+          <p>The spatial model is the only thing that changes between buildings. Author a model for a new location and the same agent is immediately deployable there — no additional infrastructure required.</p>
+        </div>
+      </div>
+    </div>
+    <figure class="figure" style="margin-top:48px">
+      <img src="assets/top_down.png" alt="Top-down view of 13-room multi-functional building">
+      <figcaption>Fig. 1 — Top-down view of a 13-room multi-functional building used as demonstration. Generated from a single text prompt using Spintel, a 3D scene generation pipeline from Spatial Intelligence.</figcaption>
+    </figure>
+  </section>
+</div>
+
+<!-- EXAMPLES INTRO -->
+<div class="container">
+  <section>
+    <p class="section-label">Examples <span class="section-counter">— 02</span></p>
+    <p style="color:var(--fg-muted);max-width:580px;transition:color 0.8s">Three examples using the 13-room building shown above, each demonstrating a distinct capability of the SCP agent.</p>
+  </section>
+</div>
+
+<!-- EXAMPLE 1 -->
+<div class="container">
+  <section>
+    <div class="example-header">
+      <span class="example-number">01</span>
+      <span class="example-title">Natural language wayfinding</span>
+    </div>
+    <div class="terminal-shell">
+      <div class="terminal-bar">
+        <div class="terminal-dot"></div><div class="terminal-dot"></div><div class="terminal-dot"></div>
+        <span class="terminal-label">scp-agent · session 01</span>
+      </div>
+      <div class="terminal-body">
+        <div class="terminal-line">
+          <span class="terminal-prompt terminal-prompt--q">›</span>
+          <span class="terminal-text"><span class="q">How do I get from the entrance to the changing room?</span></span>
+        </div>
+        <div class="terminal-line">
+          <span class="terminal-prompt terminal-prompt--r">→</span>
+          <span class="terminal-text">From the entrance lobby, walk north through the opening in the north wall and follow the corridor to the main junction. At the junction, take the third doorway from the south — between the <span class="hl">orange noticeboard</span> and the kitchen door — into the changing room. Total distance: <span class="hl">13.9 m</span>.</span>
+        </div>
+      </div>
+    </div>
+    <div class="figure-pair">
+      <figure class="figure">
+        <img src="assets/showcase_1a.png" alt="Wayfinding route visualised">
+        <figcaption>Fig. 2a — Route traversal visualised across the building model.</figcaption>
+      </figure>
+      <figure class="figure">
+        <img src="assets/showcase_1b.png" alt="Landmark identification at junction">
+        <figcaption>Fig. 2b — Landmark identification at the corridor junction.</figcaption>
+      </figure>
+    </div>
+    <div class="insight">The agent traverses the building as a human would, identifies the two-hop route, and produces turn-by-turn directions with named landmarks. No pre-computed routes — real-time traversal of the spatial model underpins the system, enabling deployment across multiple venues.</div>
+  </section>
+</div>
+
+<!-- EXAMPLE 2 -->
+<div class="container">
+  <section>
+    <div class="example-header">
+      <span class="example-number">02</span>
+      <span class="example-title">Location identification from description</span>
+    </div>
+    <div class="terminal-shell">
+      <div class="terminal-bar">
+        <div class="terminal-dot"></div><div class="terminal-dot"></div><div class="terminal-dot"></div>
+        <span class="terminal-label">scp-agent · session 02</span>
+      </div>
+      <div class="terminal-body">
+        <div class="terminal-line">
+          <span class="terminal-prompt terminal-prompt--q">›</span>
+          <span class="terminal-text"><span class="q">I'm not sure where I am. I can see grey metal lockers and a bench running down the middle of the room.</span></span>
+        </div>
+        <div class="terminal-line">
+          <span class="terminal-prompt terminal-prompt--r">→</span>
+          <span class="terminal-text">You are in the <span class="hl">Changing Room</span> — identified from the grey metal lockers lining the north and south walls and the benches running down the centre. Exit route: east → corridor junction → south → entrance lobby. ~<span class="hl">14 m</span>.</span>
+        </div>
+      </div>
+    </div>
+    <figure class="figure">
+      <img src="assets/showcase_2a.png" alt="Changing room identified from description">
+      <figcaption>Fig. 3 — The changing room, identified by the agent from a natural language description alone.</figcaption>
+    </figure>
+    <div class="insight">The agent matches a natural language description against its spatial model, identifies the room without being told where the user is, and offers directions to the exit. The same mechanism handles intent-based queries: "where can I find somewhere quiet to work?"</div>
+  </section>
+</div>
+
+<!-- ── SCROLL-JACKED THEME TRANSITION ── -->
+<div id="transition-zone">
+  <div id="transition-sticky">
+    <p class="transition-label" id="transitionLabel"></p>
+  </div>
+</div>
+
+<!-- EXAMPLE 3 -->
+<div class="container">
+  <section>
+    <div class="example-header">
+      <span class="example-number">03</span>
+      <span class="example-title">Route-conditioned building control</span>
+    </div>
+    <div class="terminal-shell">
+      <div class="terminal-bar">
+        <div class="terminal-dot"></div><div class="terminal-dot"></div><div class="terminal-dot"></div>
+        <span class="terminal-label">scp-agent · session 03</span>
+      </div>
+      <div class="terminal-body">
+        <div class="terminal-line">
+          <span class="terminal-prompt terminal-prompt--q">›</span>
+          <span class="terminal-text"><span class="q">Find me a path to the lounge. Turn on lights for every room I'll pass through.</span></span>
+        </div>
+        <div class="terminal-line">
+          <span class="terminal-prompt terminal-prompt--r">→</span>
+          <span class="terminal-text">Route: entrance lobby → main corridor → briefing room → lounge.<br><br><span class="hl">Lights activated: entrance lobby → corridor → briefing room → lounge.</span></span>
+        </div>
+      </div>
+    </div>
+    <figure class="figure">
+      <img src="assets/example_3.gif" alt="Route-conditioned building control animation">
+      <figcaption>Fig. 4 — The agent traverses the building in real time, activating lights room-by-room as it plans the route.</figcaption>
+    </figure>
+    <div class="insight">The agent traverses the building in real-time, reasoning step-by-step about live state. It interacts with the building control layer to activate lights as it passes through rooms. Live state and system control flow through the same underlying spatial model.</div>
+  </section>
+</div>
+
+<!-- HOW IT WORKS -->
+<div class="container">
+  <section>
+    <p class="section-label">Building the spatial model <span class="section-counter">— 03</span></p>
+    <div class="prose" style="max-width:620px">
+      <p class="muted">A building is described to the system from simple inputs — a walkthrough video, photographs, or a basic floorplan. The generated spatial model is compact, human-readable, and maintainable without specialist tooling.</p>
+    </div>
+    <div class="pull-quote">
+      The spatial model is the only thing that changes between buildings — making SCP deployable at scale across any venue, without bespoke engineering.
+    </div>
+    <div class="steps">
+      <div class="step">
+        <p class="step-number">01 — INPUTS</p>
+        <p class="step-title">Simple source materials</p>
+        <p class="step-body">A walkthrough video, photographs, or an existing floorplan. No specialist survey equipment or BIM software required.</p>
+      </div>
+      <div class="step">
+        <p class="step-number">02 — MODEL</p>
+        <p class="step-title">Compact spatial model</p>
+        <p class="step-body">Human-readable model encoding rooms, routes, landmarks, and live system state. Authored once, maintained without specialist tooling.</p>
+      </div>
+      <div class="step">
+        <p class="step-number">03 — DEPLOY</p>
+        <p class="step-title">Immediate deployment</p>
+        <p class="step-body">Same agent, any building. Swap the spatial model to deploy to a new venue — no additional infrastructure or bespoke engineering.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- CLOSING -->
+<div class="container">
+  <div class="closing">
+    <p class="closing-statement">SCP spatially grounds AI agents for the first time — enabling them to assist with genuinely 3D tasks, and marking a step toward agents that can inhabit and operate autonomously in the physical world.</p>
+    <div class="closing-meta">
+      <span>Yunus Skeete · Founder &amp; CEO</span>
+      <span>·</span>
+      <a href="https://www.spatial-intelligence.co.uk/" target="_blank">Spatial Intelligence</a>
+      <span>·</span>
+      <span>2026</span>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
