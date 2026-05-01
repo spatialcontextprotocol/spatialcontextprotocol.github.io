@@ -82,6 +82,7 @@ nav {
   padding: 28px 48px;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 12px;
   max-width: 860px;
   margin: 0 auto;
