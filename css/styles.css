@@ -333,6 +333,9 @@ html.is-dark .example-number {
   background: var(--rule);
   transition: background 0.8s ease;
 }
+.terminal-dot:nth-child(1) { background: oklch(55% 0.04 25); }
+.terminal-dot:nth-child(2) { background: oklch(62% 0.04 65); }
+.terminal-dot:nth-child(3) { background: oklch(55% 0.04 145); }
 .terminal-label {
   font-family: var(--font-mono);
   font-size: 11px;
