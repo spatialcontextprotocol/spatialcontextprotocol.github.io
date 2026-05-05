@@ -1,3 +1,3 @@
-# scp.github.io
+# spatialcontextprotocol.github.io
 
 Spatial Context Protocol: A protocol for AI agents that understand the physical world — enabling LLMs to navigate buildings, identify locations, and control their environment in real time.
