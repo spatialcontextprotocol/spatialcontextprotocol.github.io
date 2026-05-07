@@ -21,7 +21,7 @@ git submodule update --init
 The site uses ES modules (`type="module"`), which require a server — opening `index.html` directly in a browser will not work.
 
 ```bash
-python3 -m http.server 8000
+python -m http.server 8000
 ```
 
 Then open http://localhost:8000.
