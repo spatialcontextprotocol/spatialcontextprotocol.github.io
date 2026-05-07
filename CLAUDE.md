@@ -20,7 +20,7 @@ The spatialcontextprotocol.github.io landing page — a single-page static site 
 ## Standards
 
 Standards are in `standards/` (git submodule). Traverse it to find relevant documents.
-Relevant areas: `standards/frontend/`, `standards/agents/`.
+Relevant areas: `standards/frontend/`, `standards/agents/`, `standards/design/`.
 
 ## Architecture
 
