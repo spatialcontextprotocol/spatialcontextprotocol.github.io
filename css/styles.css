@@ -20,7 +20,7 @@
 }
 
 /* Dark theme token overrides — applied via class on html */
-html.is-dark {
+html.dark {
   --bg:           oklch(13% 0.012 220);
   --bg-raised:    oklch(17% 0.012 220);
   --bg-surface:   oklch(20% 0.012 220);
@@ -88,7 +88,7 @@ nav {
   margin: 0 auto;
   transition: border-color 0.8s ease;
 }
-html.is-dark nav { border-bottom: 1px solid var(--rule); }
+html.dark nav { border-bottom: 1px solid var(--rule); }
 
 .nav-label {
   font-family: var(--font-mono);
@@ -122,7 +122,7 @@ html.is-dark nav { border-bottom: 1px solid var(--rule); }
   pointer-events: none;
   transition: opacity 0.8s ease;
 }
-html.is-dark .hero-grid { opacity: 0.5; }
+html.dark .hero-grid { opacity: 0.5; }
 
 .hero-inner { position: relative; z-index: 1; }
 
@@ -138,7 +138,7 @@ html.is-dark .hero-grid { opacity: 0.5; }
   gap: 12px;
   transition: color 0.8s ease;
 }
-html.is-dark .hero-eyebrow::before {
+html.dark .hero-eyebrow::before {
   content: '';
   display: inline-block;
   width: 24px;
@@ -156,14 +156,14 @@ html.is-dark .hero-eyebrow::before {
   margin-bottom: 36px;
   transition: color 0.8s ease, font-family 0.1s;
 }
-html.is-dark .hero-title { font-family: var(--font-display); }
+html.dark .hero-title { font-family: var(--font-display); }
 
 .hero-title .accent {
   color: var(--teal);
   transition: color 0.8s ease, display 0s;
 }
-html:not(.is-dark) .hero-title .accent { font-style: italic; display: inline; }
-html.is-dark .hero-title .accent { display: block; }
+html:not(.dark) .hero-title .accent { font-style: italic; display: inline; }
+html.dark .hero-title .accent { display: block; }
 
 .hero-tagline {
   font-size: 20px;
@@ -195,7 +195,7 @@ section {
   border-bottom: 1px solid var(--rule);
   transition: border-color 0.8s ease;
 }
-html.is-dark section { border-bottom: none; border-top: 1px solid var(--rule); }
+html.dark section { border-bottom: none; border-top: 1px solid var(--rule); }
 
 .section-label {
   font-family: var(--font-mono);
@@ -209,7 +209,7 @@ html.is-dark section { border-bottom: none; border-top: 1px solid var(--rule); }
   gap: 14px;
   transition: color 0.8s ease;
 }
-html:not(.is-dark) .section-label::after {
+html:not(.dark) .section-label::after {
   content: '';
   flex: 1;
   height: 1px;
@@ -222,7 +222,7 @@ html:not(.is-dark) .section-label::after {
   font-size: 10px;
   transition: color 0.8s ease;
 }
-html:not(.is-dark) .section-label .section-counter { display: none; }
+html:not(.dark) .section-label .section-counter { display: none; }
 
 /* ── Overview ── */
 .overview-grid {
@@ -241,7 +241,7 @@ html:not(.is-dark) .section-label .section-counter { display: none; }
   color: var(--fg);
   transition: background 0.8s ease, border 0.8s ease, padding 0.4s ease;
 }
-html.is-dark .overview-aside {
+html.dark .overview-aside {
   background: var(--bg-raised);
   border-left: none;
   border: 1px solid var(--rule);
@@ -295,7 +295,7 @@ html.is-dark .overview-aside {
   line-height: 1;
   transition: color 0.8s ease, font-size 0.4s ease, letter-spacing 0.4s ease;
 }
-html.is-dark .example-number {
+html.dark .example-number {
   font-size: 11px;
   letter-spacing: 0.12em;
   color: var(--teal);
@@ -377,7 +377,7 @@ html.is-dark .example-number {
   text-wrap: pretty;
   transition: color 0.8s ease, border-color 0.8s ease;
 }
-html:not(.is-dark) .insight { border-top: 2px solid var(--teal); }
+html:not(.dark) .insight { border-top: 2px solid var(--teal); }
 
 /* ── Pull quote ── */
 .pull-quote {
@@ -390,16 +390,16 @@ html:not(.is-dark) .insight { border-top: 2px solid var(--teal); }
   text-wrap: pretty;
   transition: color 0.8s ease, border-color 0.8s ease, padding 0.4s;
 }
-html:not(.is-dark) .pull-quote {
+html:not(.dark) .pull-quote {
   border-left: 3px solid var(--teal);
   padding: 4px 0 4px 28px;
 }
-html.is-dark .pull-quote {
+html.dark .pull-quote {
   padding: 36px 0;
   border-top: 1px solid var(--teal-dim);
   border-bottom: 1px solid var(--teal-dim);
 }
-html.is-dark .pull-quote::before {
+html.dark .pull-quote::before {
   content: 'KEY INSIGHT';
   display: block;
   font-family: var(--font-mono);
@@ -417,10 +417,10 @@ html.is-dark .pull-quote::before {
   margin: 40px 0;
   transition: gap 0.4s, border-color 0.8s;
 }
-html.is-dark .steps { gap: 0; border: 1px solid var(--rule); }
+html.dark .steps { gap: 0; border: 1px solid var(--rule); }
 .step { transition: padding 0.4s, border-color 0.8s; }
-html.is-dark .step { padding: 28px 24px; border-right: 1px solid var(--rule); }
-html.is-dark .step:last-child { border-right: none; }
+html.dark .step { padding: 28px 24px; border-right: 1px solid var(--rule); }
+html.dark .step:last-child { border-right: none; }
 .step-number {
   font-family: var(--font-mono);
   font-size: 10px;
@@ -432,7 +432,7 @@ html.is-dark .step:last-child { border-right: none; }
   gap: 8px;
   transition: color 0.8s;
 }
-html.is-dark .step-number::after { content: ''; flex: 1; height: 1px; background: var(--rule); }
+html.dark .step-number::after { content: ''; flex: 1; height: 1px; background: var(--rule); }
 .step-title { font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--fg); transition: color 0.8s; }
 .step-body { font-size: 14px; color: var(--fg-muted); line-height: 1.6; transition: color 0.8s; }
 
@@ -448,7 +448,7 @@ html.is-dark .step-number::after { content: ''; flex: 1; height: 1px; background
   margin-bottom: 40px;
   transition: color 0.8s, border-color 0.8s, padding 0.4s;
 }
-html.is-dark .closing-statement { border-left: 2px solid var(--teal); padding-left: 24px; }
+html.dark .closing-statement { border-left: 2px solid var(--teal); padding-left: 24px; }
 .closing-meta {
   font-family: var(--font-mono);
   font-size: 12px;
@@ -502,6 +502,6 @@ html.is-dark .closing-statement { border-left: 2px solid var(--teal); padding-le
   nav { padding: 24px; }
   .overview-grid { grid-template-columns: 1fr; gap: 32px; }
   .steps { grid-template-columns: 1fr; }
-  html.is-dark .step { border-right: none; border-bottom: 1px solid var(--rule); }
+  html.dark .step { border-right: none; border-bottom: 1px solid var(--rule); }
   .figure-pair { grid-template-columns: 1fr; }
 }
