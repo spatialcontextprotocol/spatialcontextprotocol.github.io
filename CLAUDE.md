@@ -19,10 +19,8 @@ The spatialcontextprotocol.github.io landing page — a single-page static site 
 
 ## Standards
 
-| Standard | Link |
-|---|---|
-| Frontend | https://github.com/3D-intelligence/standards/blob/main/frontend/TEMPLATE-static_github_pages.md |
-| Task workflow | https://github.com/3D-intelligence/standards/blob/main/agents/task_workflow.md |
+Standards are in `standards/` (git submodule). Traverse it to find relevant documents.
+Relevant areas: `standards/frontend/`, `standards/agents/`.
 
 ## Architecture
 
