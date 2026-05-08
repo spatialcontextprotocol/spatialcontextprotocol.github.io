@@ -188,7 +188,10 @@
       </div>
     </div>
     <figure class="figure">
-      <img src="assets/images/example_3.gif" alt="Route-conditioned building control animation">
+      <div class="viewer-wrap">
+        <canvas id="example3-viewer"></canvas>
+        <p class="viewer-loading">Loading…</p>
+      </div>
       <figcaption>Fig. 4 — The agent traverses the building in real time, activating lights room-by-room as it plans the route.</figcaption>
     </figure>
     <div class="insight">The agent traverses the building in real-time, reasoning step-by-step about live state. It interacts with the building control layer to activate lights as it passes through rooms. Live state and system control flow through the same underlying spatial model.</div>
@@ -251,5 +254,6 @@
 <script src="js/viewer.js" type="module"></script>
 <script src="js/viewer-example-1.js" type="module"></script>
 <script src="js/viewer-example-2.js" type="module"></script>
+<script src="js/viewer-example-3.js" type="module"></script>
 </body>
 </html>
