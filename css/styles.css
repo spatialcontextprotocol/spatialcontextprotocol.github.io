@@ -99,7 +99,7 @@ html.dark nav { border-bottom: 1px solid var(--rule); }
   white-space: nowrap;
   transition: color 0.8s ease;
 }
-.nav-brand { color: var(--teal); transition: color 0.8s ease; }
+.nav-brand { color: var(--teal); transition: color 0.8s ease; text-decoration: none; }
 .nav-dot { color: var(--rule); transition: color 0.8s ease; }
 
 /* ── Hero ── */
