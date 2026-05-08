@@ -1,8 +1,8 @@
 # TASK-glb-viewer
 
-**Status**: In Progress
+**Status**: Complete
 **Branch**: glb
-**Commit**: —
+**Commit**: 804a2a5
 
 ## Problem
 
