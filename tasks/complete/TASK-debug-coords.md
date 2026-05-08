@@ -1,8 +1,8 @@
 # TASK-debug-coords
 
-**Status**: Pending
+**Status**: Complete
 **Branch**: debug-coords
-**Commit**: —
+**Commit**: bf3ec30
 
 ## Problem
 
@@ -31,8 +31,8 @@ No changes to `index.html` or `css/styles.css` are needed — the overlay is inj
 
 ## Verification
 
-- [ ] Importing `initDebugCoords` and calling it in the existing `js/viewer.js` does not cause any errors
-- [ ] Pressing C toggles the overlay visible/hidden
-- [ ] The displayed position and target values update in real time as the camera is dragged
-- [ ] The overlay does not appear on page load (hidden by default)
-- [ ] Removing the import from `viewer.js` after coordinate discovery leaves no trace in the DOM
+- [x] Importing `initDebugCoords` and calling it in the existing `js/viewer.js` does not cause any errors
+- [x] Pressing C toggles the overlay visible/hidden
+- [x] The displayed position and target values update in real time as the camera is dragged
+- [x] The overlay does not appear on page load (hidden by default)
+- [x] Removing the import from `viewer.js` after coordinate discovery leaves no trace in the DOM

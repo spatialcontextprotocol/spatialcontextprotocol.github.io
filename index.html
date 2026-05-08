@@ -108,20 +108,17 @@
         </div>
         <div class="terminal-line">
           <span class="terminal-prompt terminal-prompt--r">→</span>
-          <span class="terminal-text">From the entrance lobby, walk north through the opening in the north wall and follow the corridor to the main junction. At the junction, take the third doorway from the south — between the <span class="hl">orange noticeboard</span> and the kitchen door — into the changing room. Total distance: <span class="hl">13.9 m</span>.</span>
+          <span class="terminal-text">From the entrance lobby, walk north through the opening in the north wall and follow the corridor to the main junction. At the junction, take the third doorway from the south — between the <span class="hl">orange noticeboard</span> and the <span class="hl">kitchen door</span> — into the changing room. Total distance: <span class="hl">13.9 m</span>.</span>
         </div>
       </div>
     </div>
-    <div class="figure-pair">
-      <figure class="figure">
-        <img src="assets/images/showcase_1a.png" alt="Wayfinding route visualised">
-        <figcaption>Fig. 2a — Route traversal visualised across the building model.</figcaption>
-      </figure>
-      <figure class="figure">
-        <img src="assets/images/showcase_1b.png" alt="Landmark identification at junction">
-        <figcaption>Fig. 2b — Landmark identification at the corridor junction.</figcaption>
-      </figure>
-    </div>
+    <figure class="figure" style="margin-top:40px">
+      <div class="viewer-wrap">
+        <canvas id="example1-viewer"></canvas>
+        <p class="viewer-loading">Loading…</p>
+      </div>
+      <figcaption>Fig. 2 — The yellow route line traces the entrance → junction → changing room path provided by the AI agent. Yellow arrows mark the three landmarks referenced in the agent's directions: the orange noticeboard, the kitchen door, and the changing room entrance.</figcaption>
+    </figure>
     <div class="insight">The agent traverses the building as a human would, identifies the two-hop route, and produces turn-by-turn directions with named landmarks. No pre-computed routes — real-time traversal of the spatial model underpins the system, enabling deployment across multiple venues.</div>
   </section>
 </div>
@@ -249,5 +246,6 @@
 </script>
 <script src="js/main.js" type="module"></script>
 <script src="js/viewer.js" type="module"></script>
+<script src="js/viewer-example-1.js" type="module"></script>
 </body>
 </html>
