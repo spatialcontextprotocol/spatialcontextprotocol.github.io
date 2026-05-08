@@ -4,6 +4,10 @@ IMPORTANT: This is a no-build static site. Do not add npm, a package.json, node_
 
 ---
 
+## Safety
+
+Never read or commit `.env` files.
+
 ## What this project is
 
 The spatialcontextprotocol.github.io landing page — a single-page static site presenting the Spatial Context Protocol research and demonstrations by Spatial Intelligence.
