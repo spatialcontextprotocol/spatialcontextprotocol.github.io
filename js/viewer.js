@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
+// import { initDebugCoords } from './debug-coords.js';
 
 const SCENE_PATH = 'assets/models/scene-208.glb';
 
@@ -91,6 +92,8 @@ function startViewer(canvas) {
     if (hint) hint.classList.add('viewer-hint--hidden');
   }
   renderer.domElement.addEventListener('pointerdown', onInteract, { once: true });
+
+  // initDebugCoords(camera, controls, canvas.parentElement);
 
   // R key cycles through ROTATION_SPEEDS
   let speedIndex = 0;
