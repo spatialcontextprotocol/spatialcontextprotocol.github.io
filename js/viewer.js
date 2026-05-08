@@ -23,6 +23,20 @@ function init() {
   const canvas = document.getElementById('scp-viewer');
   if (!canvas) return;
 
+  // Defer all Three.js work until the canvas enters the viewport.
+  // This prevents WebGL initialisation and GLB parsing from running on page
+  // load when the user is scrolled away from the viewer — which would cause
+  // stutter in the CSS transitions triggered by theme-transition.js.
+  const observer = new IntersectionObserver((entries) => {
+    if (!entries[0].isIntersecting) return;
+    observer.disconnect();
+    startViewer(canvas);
+  }, { threshold: 0.1 });
+  observer.observe(canvas);
+}
+
+function startViewer(canvas) {
+
   const hint = document.querySelector('.viewer-hint');
 
   // ── Renderer ──────────────────────────────────────
@@ -63,17 +77,20 @@ function init() {
   controls.screenSpacePanning = true;
   controls.autoRotate = true;
   controls.autoRotateSpeed = 0.6;
+  // Zoom disabled until the user clicks — prevents OrbitControls from calling
+  // preventDefault() on wheel events and blocking page scroll.
+  controls.enableZoom = false;
 
-  // Stop auto-rotate and fade hint on first interaction
+  // On first pointerdown: stop auto-rotate, enable zoom, fade hint.
   let interacted = false;
   function onInteract() {
     if (interacted) return;
     interacted = true;
     controls.autoRotate = false;
+    controls.enableZoom = true;
     if (hint) hint.classList.add('viewer-hint--hidden');
   }
   renderer.domElement.addEventListener('pointerdown', onInteract, { once: true });
-  renderer.domElement.addEventListener('wheel', onInteract, { once: true });
 
   // R key cycles through ROTATION_SPEEDS
   let speedIndex = 0;
