@@ -1,8 +1,8 @@
 # TASK-viewer-example-2
 
-**Status**: Pending
+**Status**: Complete
 **Branch**: viewer-example-2
-**Commit**: —
+**Commit**: 8a0f006
 
 ## Problem
 
@@ -42,11 +42,11 @@ The existing `.figure` for Fig 3 in `index.html` is replaced with a `.viewer-wra
 
 ## Verification
 
-- [ ] On load the camera starts at the wide overview position
-- [ ] The camera smoothly zooms into the changing room and holds
-- [ ] The camera smoothly zooms back out to the overview and holds, then repeats
-- [ ] The easing is smooth (no linear snapping at start or end of transitions)
-- [ ] The loop runs continuously without drift or accumulating error
-- [ ] Page scroll is not blocked when the cursor is over the canvas
-- [ ] The viewer initialises only when the canvas enters the viewport (IntersectionObserver)
-- [ ] No console errors on load
+- [x] On load the camera starts at the wide overview position
+- [x] The camera smoothly zooms into the changing room and holds
+- [x] The camera smoothly zooms back out to the overview and holds, then repeats
+- [x] The easing is smooth (no linear snapping at start or end of transitions)
+- [x] The loop runs continuously without drift or accumulating error
+- [x] Page scroll is not blocked when the cursor is over the canvas
+- [x] The viewer initialises only when the canvas enters the viewport (IntersectionObserver)
+- [x] No console errors on load
