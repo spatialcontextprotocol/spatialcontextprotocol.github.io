@@ -183,6 +183,7 @@ function startViewer(canvas) {
 
     const t = performance.now() * 0.001;
     ARROW_DEFS.forEach(({ yLow, yHigh }, i) => {
+      if (!arrowMeshes[i]) return;
       const mid = (yLow + yHigh) / 2;
       const amp = (yHigh - yLow) / 2;
       arrowMeshes[i].position.y = mid + amp * Math.sin(t);
