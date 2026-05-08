@@ -279,6 +279,7 @@ html.dark .overview-aside {
   line-height: 1.5;
   transition: color 0.8s ease;
 }
+.figure figcaption a { color: var(--teal); text-decoration: none; transition: color 0.8s ease; }
 .figure-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 40px 0; }
 .figure-pair .figure { margin: 0; }
 
