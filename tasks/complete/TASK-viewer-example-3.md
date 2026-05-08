@@ -1,8 +1,8 @@
 # TASK-viewer-example-3
 
-**Status**: Pending
+**Status**: Complete
 **Branch**: viewer-example-3
-**Commit**: —
+**Commit**: c6ac817
 
 ## Problem
 
