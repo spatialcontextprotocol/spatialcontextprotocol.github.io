@@ -20,7 +20,15 @@ The spatialcontextprotocol.github.io landing page — a single-page static site 
 ## Standards
 
 Standards are in `standards/` (git submodule). Traverse it to find relevant documents.
-Relevant areas: `standards/frontend/`, `standards/agents/`, `standards/design/`.
+
+Key standards for this project:
+
+- `standards/frontend/FRONTEND_STANDARDS.md` — template selection guide
+- `standards/frontend/TEMPLATE-static_github_pages.md` — canonical conventions for this project
+- `standards/design/DESIGN_SYSTEM-scp.html` — design tokens, components, and copy voice
+- `standards/agents/AGENTS_STANDARDS.md` — agentic coding entry point
+- `standards/agents/task_workflow.md` — mandatory before implementing anything
+- `standards/agents/claude/claude.md` — how to write and maintain this file
 
 ## Architecture
 
