@@ -514,6 +514,7 @@ html.dark .closing-statement { border-left: 2px solid var(--teal); padding-left:
   display: block;
   background: var(--bg);
   transition: background-color 0.8s ease;
+  will-change: contents;
 }
 
 .viewer-loading,

@@ -177,8 +177,22 @@ function startViewer(canvas) {
   renderer.setSize(canvas.clientWidth, canvas.clientHeight, false);
 
   // ── Render loop ───────────────────────────────────
+  // Loop is paused when the canvas is off-screen to free GPU bandwidth for
+  // CSS compositor animations (scroll-jacked theme transition, scroll progress).
+  let animHandle = null;
+
+  function startLoop() {
+    if (animHandle !== null) return;
+    animHandle = requestAnimationFrame(animate);
+  }
+
+  function stopLoop() {
+    cancelAnimationFrame(animHandle);
+    animHandle = null;
+  }
+
   function animate() {
-    requestAnimationFrame(animate);
+    animHandle = requestAnimationFrame(animate);
     controls.update();
 
     const t = performance.now() * 0.001;
@@ -191,7 +205,20 @@ function startViewer(canvas) {
 
     renderer.render(scene, camera);
   }
-  animate();
+
+  // Pause when scrolled off-screen; resume when back in view.
+  const visObs = new IntersectionObserver(
+    entries => entries[0].isIntersecting ? startLoop() : stopLoop(),
+    { threshold: 0.05 }
+  );
+  visObs.observe(canvas);
+
+  // Pause when the browser tab is hidden.
+  document.addEventListener('visibilitychange', () => {
+    document.hidden ? stopLoop() : startLoop();
+  });
+
+  startLoop();
 }
 
 init();
