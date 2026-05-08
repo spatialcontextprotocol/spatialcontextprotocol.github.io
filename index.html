@@ -147,8 +147,11 @@
       </div>
     </div>
     <figure class="figure">
-      <img src="assets/images/showcase_2a.png" alt="Changing room identified from description">
-      <figcaption>Fig. 3 — The changing room, identified by the agent from a natural language description alone.</figcaption>
+      <div class="viewer-wrap">
+        <canvas id="example2-viewer"></canvas>
+        <p class="viewer-loading">Loading…</p>
+      </div>
+      <figcaption>Fig. 3 — The changing room, identified by the agent by matching the natural language description alone against its lightweight spatial model.</figcaption>
     </figure>
     <div class="insight">The agent matches a natural language description against its spatial model, identifies the room without being told where the user is, and offers directions to the exit. The same mechanism handles intent-based queries: "where can I find somewhere quiet to work?"</div>
   </section>
@@ -247,5 +250,6 @@
 <script src="js/main.js" type="module"></script>
 <script src="js/viewer.js" type="module"></script>
 <script src="js/viewer-example-1.js" type="module"></script>
+<script src="js/viewer-example-2.js" type="module"></script>
 </body>
 </html>
