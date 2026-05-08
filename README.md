@@ -1,6 +1,6 @@
 # spatialcontextprotocol.github.io
 
-Spatial Context Protocol: A protocol for AI agents to understand the physical world — enabling LLMs to navigate buildings, identify locations, and control their environment in real time.
+[Spatial Context Protocol](https://spatialcontextprotocol.github.io): A protocol for AI agents to understand the physical world — enabling LLMs to navigate buildings, identify locations, and control their environment in real time.
 
 ## Cloning
 
