@@ -1,8 +1,8 @@
 # TASK-viewer-example-1
 
-**Status**: Pending
+**Status**: Complete
 **Branch**: viewer-example-1
-**Commit**: —
+**Commit**: ee6dde6
 
 ## Problem
 
@@ -33,10 +33,10 @@ These values are defined as named constants at the top of the module.
 
 ## Verification
 
-- [ ] The yellow route line traces the entrance → junction → changing room path at floor level
-- [ ] Three yellow arrows point downward at the landmark positions shown in showcase_1b
-- [ ] The camera opens at the pre-configured angle showing the full route — no auto-rotation
-- [ ] OrbitControls orbit and pan work; scroll-to-zoom is disabled until first click
-- [ ] Page scroll is not blocked when the cursor is over the canvas (zoom disabled until pointerdown)
-- [ ] The viewer initialises only when the canvas enters the viewport (IntersectionObserver)
-- [ ] No console errors on load
+- [x] The yellow route line traces the entrance → junction → changing room path at floor level
+- [x] Three yellow arrows point downward at the landmark positions shown in showcase_1b
+- [x] The camera opens at the pre-configured angle showing the full route — no auto-rotation
+- [x] OrbitControls orbit and pan work; scroll-to-zoom is disabled until first click
+- [x] Page scroll is not blocked when the cursor is over the canvas (zoom disabled until pointerdown)
+- [x] The viewer initialises only when the canvas enters the viewport (IntersectionObserver)
+- [x] No console errors on load
